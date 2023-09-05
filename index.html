@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Assets/favicon-web.svg" type="image/x-icon">
+    <title>JavaScript - Assignment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="landing__page">
+        <nav class="nav__container">
+            <div class="nav__left">
+                <img src="/Assets/web-logo.svg" alt="">
+            </div>
+            <div class="nav__center">
+                <ul>
+                    <li>Assigment</li>
+                    <li>Evaluation</li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="https://github.com/NihhZaeyy/HSBC_JavaScript_1" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+        </nav>
+        <div id="landing__title">
+            <h1 class="title">JavaScript Assignment</h1>
+        </div>
+    </section>
+    <section id="assignment">
+        <div class="assignment__title">
+            <h1> Simulasi Pembelian Tiket Museum secara Online</h1>
+        </div>
+        <div id="card__container">
+            <!-- Rendered in Js -->
+        </div>
+    </section>
+
+    <section id="cart__section">
+        <div id="cart__container">
+            <div class="cart__title">
+                <h1>Here's your items</h1>
+            </div>
+            <div id="cart__list">
+                <div id="list__item">
+                    <!-- rendered in js -->
+
+                </div>
+                <div id="nothing">
+                    <div class="nothing__image">
+                        <img src="/Assets/nothing.svg" alt="">
+                    </div>
+                    <p>There's nothing here</p>
+                </div>
+            </div>
+            <div id="total">
+                <!-- renderd in JS -->
+            </div>
+            <div class="payment__container" id="popupPayment">
+                <div class="payment__right">
+                    <h1>Payment</h1>
+                    <form class="payment__form" id="bank__form">
+                        <div class="bank__type">
+                            <div class="atm">
+                                <label>
+                                    <input  type="radio" name="choice" value="option1" required>
+                                </label>
+                                <img class="visa" src="/Assets/visa-icon.svg" alt="">
+                            </div>
+                            <div class="atm">
+                                <label>
+                                    <input type="radio" name="choice" value="option2" required>
+                                </label>
+                                <img class="mastercard" src="/Assets/mastercard-icon.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="bank__name">
+                            <div class="name">
+                                <label for="name">Name:</label>
+                                <input class="input__name" type="text" id="name-user" name="name" placeholder="Nizar" required>
+                            </div>
+                            <div class="name">
+                                <label for="name">Last Name:</label>
+                                <input class="input__name" type="text" id="last-name" name="last-name" placeholder="Almas" required>
+                            </div>
+                        </div>
+                        <div class="bank__iban">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="_ _ _ _ - _ _ _ _ - _ _ _ _ - _ _ _ _ " maxlength="19" required>
+                            <div id="error-message" style="color: red;"></div>
+                        </div>
+                        <div class="bank__confirm">
+                            <label>
+                                <input type="radio" name="rules1" id="rules1" required>I have read and approve <b>BANK Rules</b>
+                            </label>
+                            <label>
+                                <input type="radio" name="rules2" id="rules2" required>I have read and approve <b>BANK Preliminary Information Form</b>
+                            </label>
+                        </div>
+                        <div class="bank__check">
+                            <input type="button" value="Check" onclick="check()">
+                        </div>
+                    </form>
+                    <div class="payButton">
+                        <button class="payClosed" id="confirmed" onclick="pay()">
+                            PAY
+                        </button>
+                    </div>
+                </div>
+                <div class="payment__left">
+                    <button onclick="closePayment()"><i class='bx bx-x' style='color:#000000' ></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="evaluation">
+        <div class="eval__explanation">
+            <h1>Evaluation:</h1>
+            <div class="eval__ask">Apa saja yang ada didalam JavaScript?
+                <ul>
+                    <li>Manipulation DOM</li>
+                    <li>If else statement</li>
+                    <li>Event handling</li>
+                    <li>Array (map and filter)</li>
+                    <li>Math operational</li>
+                    <li>Selection Category</li>
+                </ul>
+            </div>
+        </div>
+        <div class="comment">
+            <form action="mailto:nizaralmas11@gmail.com" method="post" enctype="text/plain">
+                <label class="comment__text" for="comment">Comment and Critics:</label><br>
+                <textarea name="comment" id="comment__message" rows="15" cols="50" required></textarea><br>
+        
+                <input class="submit__comment" type="submit" value="Send Email">
+            </form>
+        </div>
+    </section>
+    <Footer>
+        <div class="code__box">
+            <div class="code">
+                <a href="https://github.com/NihhZaeyy/HSBC_JavaScript_1" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>Thank You kak Rizal</p>
+            <p>Jika boleh meminta waktu kakak, aku berharap untuk kak memberikan kritikan dan saran untuk code yang telah aku buat. Maaf jika tidak responsive, aku hanya fokus ke JavaScriptnya saja. Terima kasih kak!</p>
+        </div>
+    </Footer>
+</body>
+
+<script src="/Utils/museum.js"></script>
+<script src="/Utils/index.js"></script>
+</html>
